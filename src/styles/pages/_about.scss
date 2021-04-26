@@ -1,0 +1,118 @@
+.about{
+    width: calc(100% - 230px);
+    margin-left: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    h2{
+        width: 100%;
+        text-align: center;
+        color:$color-1;
+        font-size: 2.5rem;
+    }
+   .about-content{ 
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex: 50%;
+        max-width: 1200px;
+       .block{
+        flex: 50%;
+        padding: 2rem 2rem;
+        h4{
+          font-size: 1.4rem; 
+          img{
+              height: 1.5rem;
+              padding-right: 10px;
+          } 
+        }
+        p{
+            padding-bottom: 10px;
+            font-size: 1rem;
+        }
+        span{
+            background-color: $color-2;
+            color: $color-3;
+            font-size: 0.8rem;
+            padding: 0.4rem;
+            margin-right:0.5rem;
+            border-radius: 5px;
+        }
+       }
+   }
+}
+@media (min-width:992px) and (max-width: 1500px){
+    .about{
+        h2{
+            font-size: 2.2rem;
+        }
+        .about-content{
+            .block{
+                padding:2rem 3rem;
+                h4{
+                    font-size: 1.2rem;
+                }
+                p{
+                    font-size: 0.8rem;
+                }
+                span{
+                    font-size: 0.6rem;
+                }
+            }
+            
+        }
+        
+    }
+}
+@media screen and (max-width: 992px){
+    .about{
+        width: 100%;
+        margin: auto;
+        padding-bottom: 80px;
+        height: auto;
+        padding-top: 5vh;
+        h2{
+            font-size: 1.8rem;
+        }
+        .about-content{
+            .block{
+                padding:2rem 3rem;
+                h4{
+                    font-size: 1.3rem;
+                }
+                p{
+                    font-size: 0.9rem;
+                }
+                span{
+                    font-size: 0.7rem;
+                }
+            }
+            
+        }
+    } 
+}
+@media screen and (max-width: 500px){
+    .about{
+        h2{
+            font-size: 1.8rem;
+            width: 90%;
+            margin: auto;
+        }
+        .about-content{
+            .block{
+                padding: 1rem 1rem;
+                h4{
+                    font-size: 1.3rem;
+                }
+                p{
+                    font-size: 0.9rem;
+                }
+                span{
+                    font-size: 0.7rem;
+                }
+            }
+            
+        }
+    }  
+}

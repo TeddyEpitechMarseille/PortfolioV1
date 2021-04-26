@@ -1,0 +1,156 @@
+.projects{
+    width: calc(100% - 230px);
+    margin-left: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2{
+        width: 100%;
+        text-align: center;
+        color:$color-1;
+        font-size: 2.5rem;
+        padding-top: 5vh;
+    }
+   .cards{ 
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    .card-item{
+        padding-bottom: 15px;
+        padding: 1rem 2rem;
+        margin: 2rem;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        .card{
+            img{
+                height: 15rem;
+            }
+            .card-content{
+
+                h4{
+
+                }
+                p{
+                    max-width: 25rem;
+                }
+                .action{
+                    display: inline-flex;
+                    float: right;
+                    button{
+                        all: unset;
+                    }
+                    .button {
+                        flex: 1 1 auto;
+                        margin: 10px;
+                        padding: 10px;
+                        border: 1px solid $color-1;
+                        text-align: center;
+                        position: relative;
+                        overflow:hidden;
+                        transition: .3s;
+                        border-radius: 20px;
+                        color: $color-1;
+                        &:after {
+                          position: absolute;
+                          transition: .3s;
+                          content: '';
+                          width: 0;
+                          left: 50%;
+                          bottom: 0;
+                          height: 3px;
+                          background: $color-1;
+                    
+                          height: 120%;
+                          left: -10%;
+                          transform: skewX(15deg);
+                          z-index: -1;
+                        }
+                        &:hover {
+                          cursor: pointer;
+                          color: white;
+                          &:after {
+                            width: 100%;
+                            left: 0;
+                    
+                            left: -10%;
+                            width: 120%;
+                          }
+                        }
+                    }
+                    .disabled {
+                        color: currentColor;
+                        cursor: not-allowed;
+                        opacity: 0.5;
+                        text-decoration: none;
+                        color: gray;
+                        border: 1px solid gray;
+                        &:after {
+                            transform: none !important;
+                            color: currentColor;
+                        cursor: not-allowed;
+                        background-color: gray;
+                        }
+                      }
+                }
+                
+            }
+        }
+    }
+   }
+}
+
+@media screen and (max-width: 992px){
+    .projects{
+        width: 100%;
+        margin: auto;
+        padding-bottom: 80px;
+        height: auto;
+        padding-top: 1vh;
+        h2{
+            font-size: 2rem;
+        }
+
+        .cards{ 
+            .card-item{
+                .card{
+                    img{
+                        height: 10rem;
+                    }
+                    .card-content{
+                        p{
+                            max-width: 20rem;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+@media screen and (max-width: 400px){
+    .projects{
+        h2{
+            font-size: 2rem;
+        }
+
+        .cards{ 
+            .card-item{
+                padding-bottom: 15px;
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+                .card{
+                    img{
+                        height: 10rem;
+                    }
+                    .card-content{
+                        p{
+                            max-width: 20rem;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}

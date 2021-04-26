@@ -1,0 +1,167 @@
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #61b15a;
+}
+
+.navbar {
+  position: fixed;
+  background-color: $color-1;
+  transition: width 600ms ease;
+  overflow: hidden;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  .social-hr{
+    width: 40px;
+    border: 1px dashed #e5e7eb;
+    margin: 20px 0px;
+  }
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: white;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: $color-3;
+  color: $color-1;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+  color: white;
+}
+
+.nav-link img {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: white;
+}
+
+.fa-secondary {
+  color: white;
+}
+
+.fa-primary:hover{
+  color: $color-1;
+}
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: white;
+  background: $color-1;
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo img {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.logo-text
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo img {
+  transform: rotate(-180deg);
+}
+
+/* Small screens */
+@media only screen and (max-width: 992px) {
+  .navbar {
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    box-shadow: 0px 0 2px gray;
+  }
+  #themeButton,.logo, .social {
+    display: none;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    .social-hr{
+      display: none;
+    }
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+}
+
+
+/* Large screens */
+@media only screen and (min-width: 992px) {
+  .navbar {
+    top: 0;
+    width: 230px;
+    height: 100vh;
+  }
+
+  .navbar .link-text {
+    display: inline;
+  }
+
+  .navbar .logo img
+  {
+    margin-left: 11rem;
+  }
+
+  .navbar .logo-text
+  {
+    left: 0px;
+  }
+}
